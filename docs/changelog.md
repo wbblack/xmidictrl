@@ -3,10 +3,17 @@
 
 -----------------------------------------------------------------------------------------------------------------------
 
-## Version 0.61
+##  VERSION 0.61
 
 + Fixed small mapping error in IXEG 737-300 example
 + Fixed debug message for Push&Pull End command, as it was logging the pull instead of the push command
++ Don't show messages window if no aircraft profile was found
++ Improved mapping for Hot Start Challenger 650 (ISI Baro instead of FO Baro)
++ Changed load event for aircraft profiles to prevent dataref error with the Hot Start Challenger 650
++ Internal refactoring for better code readability
++ Added new mapping mode for encoders (range instead of relative)
+
+-----------------------------------------------------------------------------------------------------------------------
 
 ##  VERSION 0.60
 
@@ -16,12 +23,12 @@
 + Fixed mapping error in ZIBO example (many thanks to daan_vb for pointing them out)
 + Implemented new feature to use sublayers for HotStart CL650
 + Rewrote Push&Pull mapping, the pull command will be executed while the button is pressed down longer than 0.5 seconds
-+ Added option to define two different datarefs for out messages, e.g. sim/pilot/caution and sim/copilot/caution
-+ Added option to define multiple values for in dataref messages, e.g. toggle through autobrake settings
++ Added option to define two different datarefs for outbound messages, e.g. sim/pilot/caution and sim/copilot/caution
++ Added option to define multiple values for inbound dataref messages, e.g. toggle through autobrake settings
 + Added custom commands to bind most menu entries of XMidiCtrl to buttons and keyboard commands
-+ Added threads for sending out messages to improve the performance
-+ Velocities for button pressed/released can be defined for in command mappings
-+ Velocities for light on/off can be defined for out dataref mappings
++ Added threads for sending outbound messages to improve the performance
++ Velocities for button pressed/released can be defined for inbound command mappings
++ Velocities for light on/off can be defined for outbound dataref mappings
 + Improved documentation
 + Added example configuration for Hot Start CL-650, created by Reflected Reality Simulations
 + Added example configuration for Hot Start TBM 900
@@ -41,7 +48,7 @@
 + Enabled multiple mappings for the same control change
 + Enhanced the general logging
 + Enhanced mapping options for sliders (up, middle, down)
-+ Added midi out messages
++ Added midi outbound messages
 + Added settings window
 + Added messages window
 + Added aircraft profile window

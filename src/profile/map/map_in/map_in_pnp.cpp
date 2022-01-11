@@ -113,7 +113,7 @@ void map_in_pnp::set_time_released()
  */
 void map_in_pnp::read_config(toml::value &settings)
 {
-    LOG_DEBUG << "Line " << settings.location().line() << " :: Read settings for type 'pnp'" << LOG_END
+    LOG_DEBUG << " --> Line " << settings.location().line() << " :: Read settings for type 'pnp'" << LOG_END
     map_in::read_config(settings);
 
     // read command push
